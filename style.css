@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Baloo+Thambi+2:wght@600&family=Roboto+Slab:wght@600&display=swap');*{
+    margin: 0px;
+    padding: 0px;
+}
+nav{
+    display: flex;
+    padding: 0px 23px;
+    background-color: black;
+    
+
+}
+.item{
+    list-style: none;
+    padding: 3px 8px;
+
+}
+.item a{
+    padding: 16px 10px;
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Baloo 2', cursive;    
+}
+.item a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    margin: 12px auto;
+    max-width: 65%;
+    padding: 36px;
+    border-radius: 10px;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+h1,h2{
+    font-family: 'Roboto Slab', serif;
+    padding: 12px;
+    font-weight: bold;
+}
+p,ul>li{
+    font-size: 16px;
+}
+body{
+    background: url("bg.jpeg");
+    background-size: cover;
+    
+}
+.questions{    
+    margin: 12px 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

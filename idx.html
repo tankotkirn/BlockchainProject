@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Analysis</title>
+</head>
+<body>
+    <div id="analysis"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script>
+        // Initialize web3
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID'));
+        }
+
+        // Contract ABI and address
+        const contractABI = []; // Add your contract's ABI
+        const contractAddress = 'YOUR_CONTRACT_ADDRESS';
+
+        // Fetch analysis from the smart contract
+        async function fetchAnalysis() {
+            const contract = new web3.eth.Contract(contractABI, contractAddress);
+            const analysis = await contract.methods.getAnalysis().call();
+            return analysis;
+        }
+
+        // Update the HTML page with the analysis
+        async function updatePage() {
+            const analysis = await fetchAnalysis();
+            document.getElementById('analysis').innerText = analysis;
+        }
+
+        // Call the updatePage function when the page loads
+        window.onload = updatePage;
+    </script>
+</body>
+</html>
